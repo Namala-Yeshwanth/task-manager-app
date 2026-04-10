@@ -3,8 +3,8 @@
 A full stack Task Manager application built with React on the frontend and Node.js + Express on the backend.
 
 ## 🔗 Live Demo
-- **Frontend:** https://task-manager-app-frontend-1piheivua-namala-yeshwanths-projects.vercel.app/
-- **API:** https://task-manager-app-backend-lu0y.onrender.com/
+- **Frontend:** https://task-manager-app-frontend-lsfryecr4-namala-yeshwanths-projects.vercel.app
+- **API:** https://task-manager-app-backend-lu0y.onrender.com
 
 > ⚠️ The backend is hosted on Render's free tier and may take 30–60 seconds to wake up on first visit.
 

@@ -1,0 +1,200 @@
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color var(--transition), background var(--transition), opacity var(--transition);
+  animation: slideIn 0.2s ease;
+}
+
+.item:hover {
+  border-color: var(--border-hover);
+  background: var(--surface-2);
+}
+
+.item.completed {
+  border-color: var(--completed);
+  background: var(--completed-dim);
+  opacity: 0.8;
+}
+
+.item.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Checkbox */
+.checkbox {
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  border-radius: 6px;
+  border: 2px solid var(--border-hover);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.checkbox:hover:not(:disabled) {
+  border-color: var(--accent);
+  transform: scale(1.08);
+}
+
+.checkbox.checked {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Content */
+.content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+  word-break: break-word;
+}
+
+.completed .title {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}
+
+.badge {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background: var(--accent-dim);
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.completed .badge {
+  background: var(--completed-dim);
+  color: #5ab894;
+}
+
+.date {
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Edit mode */
+.editRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.editInput {
+  flex: 1;
+  min-width: 120px;
+  background: var(--bg);
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.saveBtn {
+  background: var(--accent);
+  color: #0d0d0d;
+  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Syne", sans-serif;
+  transition: background var(--transition);
+}
+
+.saveBtn:hover {
+  background: var(--accent-hover);
+}
+
+.cancelBtn {
+  background: var(--surface-2);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  font-size: 12px;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.cancelBtn:hover {
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+.editError {
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  color: var(--danger);
+  width: 100%;
+}
+
+/* Action buttons */
+.actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.item:hover .actions {
+  opacity: 1;
+}
+
+.editBtn,
+.deleteBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition), color var(--transition);
+  color: var(--text-muted);
+}
+
+.editBtn:hover:not(:disabled) {
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+.deleteBtn:hover:not(:disabled) {
+  background: var(--danger-dim);
+  color: var(--danger);
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

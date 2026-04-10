@@ -14,12 +14,12 @@
   {
     "id": "4e07245d-c630-4cdd-b75d-2c7aeeed4d3e",
     "title": "Build the task manager app",
-    "completed": false,
+    "completed": true,
     "createdAt": "2026-04-10T05:39:32.258Z"
   },
   {
     "id": "96e420e7-8082-4ed5-88ad-98d050c102de",
-    "title": "Bathing",
+    "title": "Need to complete Project by 11 April",
     "completed": false,
     "createdAt": "2026-04-10T05:42:02.203Z"
   },
@@ -28,5 +28,11 @@
     "title": "Swimming",
     "completed": false,
     "createdAt": "2026-04-10T05:42:12.181Z"
+  },
+  {
+    "id": "eb26b0d2-2e51-4ed0-a931-2f24cb0a0e07",
+    "title": "Buy groceries at 5:00 pm",
+    "completed": false,
+    "createdAt": "2026-04-10T05:52:51.391Z"
   }
 ]

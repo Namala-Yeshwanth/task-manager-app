@@ -6,7 +6,22 @@ const app = express();
 const PORT = 3001;
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "*",
+  origin: function (origin, callback) {
+    // Allow requests with no origin (mobile apps, Postman, curl)
+    if (!origin) return callback(null, true);
+
+    const allowedPatterns = [
+      /\.vercel\.app$/,        // any Vercel deployment
+      /localhost:\d+$/,        // any localhost port
+    ];
+
+    const isAllowed = allowedPatterns.some((pattern) => pattern.test(origin));
+    if (isAllowed) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
 }));
 
 app.use(express.json());

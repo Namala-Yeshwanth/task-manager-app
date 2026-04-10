@@ -43,7 +43,11 @@ function loadTasks() {
 
 // Save tasks array to file after every change
 function saveTasks(tasks) {
-  fs.writeFileSync(DB_FILE, JSON.stringify(tasks, null, 2), "utf8");
+  try {
+    fs.writeFileSync(DB_FILE, JSON.stringify(tasks, null, 2), "utf8");
+  } catch (err) {
+    console.warn("Could not write tasks.json:", err.message);
+  }
 }
 
 let tasks = loadTasks();

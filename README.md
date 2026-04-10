@@ -127,3 +127,6 @@ task-manager/
 - **CORS open for all origins**: Configured for local development convenience.
 - **No pagination**: Kept simple since this is a small exercise.
 - **Bonus features included**: Filter tabs, inline title editing, file persistence, nodemon, tests.
+
+<img width="1838" height="864" alt="image" src="https://github.com/user-attachments/assets/45a41422-dc38-4a22-a775-c12cfaba886c" />
+

@@ -1,3 +1,7 @@
+## 🔗 Live Demo
+Frontend: https://task-manager-app-frontend-1piheivua-namala-yeshwanths-projects.vercel.app/
+API: https://task-manager-app-backend-lu0y.onrender.com/
+
 # Task Manager
 
 A full stack Task Manager app built with React (Vite) on the frontend and Node.js + Express on the backend.
